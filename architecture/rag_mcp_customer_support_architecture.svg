@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1400" height="860" viewBox="0 0 1400 860" role="img"
+     aria-label="RAG + MCP Customer Support Assistant Architecture Diagram">
+
+  <title>RAG + MCP Customer Support Assistant</title>
+  <desc>Architecture diagram showing RAG and MCP pillars for a customer support assistant system.</desc>
+
+  <defs>
+    <!-- Arrow markers -->
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16A34A"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9333EA"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EA580C"/>
+    </marker>
+    <marker id="arrow-eval" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#B45309"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280"/>
+    </marker>
+
+    <!-- Drop shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Gradient fills -->
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DBEAFE;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#BFDBFE;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DCFCE7;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#BBF7D0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3E8FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E9D5FF;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFEDD5;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FED7AA;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grad-eval" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FDE68A;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grad-slate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F1F5F9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grad-indigo" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0E7FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#C7D2FE;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- BACKGROUND -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect width="1400" height="860" fill="#F8FAFC" rx="0"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TITLE BANNER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="0" y="0" width="1400" height="52" fill="#1E293B"/>
+  <text x="700" y="20" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold"
+        fill="#F8FAFC" text-anchor="middle" dominant-baseline="hanging">
+    RAG + MCP Customer Support Assistant
+  </text>
+  <text x="700" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#94A3B8"
+        text-anchor="middle" dominant-baseline="auto">
+    Architecture Diagram — Retrieval-Augmented Generation · Model Context Protocol · Evaluation Monitoring
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- ZONE: OUR SYSTEM (large blue-tinted background) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="285" y="68" width="870" height="720" rx="12" fill="#EFF6FF" stroke="#2563EB"
+        stroke-width="2" stroke-dasharray="8 4" filter="url(#shadow)"/>
+  <text x="295" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600"
+        fill="#1D4ED8">OUR SYSTEM</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- ZONE: THIRD-PARTY (right panel) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="1170" y="68" width="210" height="720" rx="12" fill="#FFF7ED" stroke="#EA580C"
+        stroke-width="2" stroke-dasharray="8 4" filter="url(#shadow)"/>
+  <text x="1180" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600"
+        fill="#C2410C">THIRD-PARTY</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- A. CUSTOMER / USER  (left side) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="20" y="310" width="145" height="100" rx="10" fill="url(#grad-slate)"
+        stroke="#64748B" stroke-width="2" filter="url(#shadow)"/>
+  <!-- person icon -->
+  <circle cx="92" cy="336" r="14" fill="#64748B"/>
+  <ellipse cx="92" cy="366" rx="20" ry="13" fill="#64748B"/>
+  <text x="92" y="390" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700"
+        fill="#1E293B" text-anchor="middle">Customer</text>
+  <text x="92" y="405" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#475569"
+        text-anchor="middle">Submits query /</text>
+  <text x="92" y="416" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#475569"
+        text-anchor="middle">receives answer</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- B. API GATEWAY -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="295" y="295" width="160" height="130" rx="10" fill="url(#grad-indigo)"
+        stroke="#4F46E5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="375" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700"
+        fill="#3730A3" text-anchor="middle">API Gateway</text>
+  <!-- divider -->
+  <line x1="305" y1="323" x2="445" y2="323" stroke="#818CF8" stroke-width="1"/>
+  <text x="375" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#3730A3"
+        text-anchor="middle">· Accepts customer queries</text>
+  <text x="375" y="351" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#3730A3"
+        text-anchor="middle">· Routes to orchestrator</text>
+  <text x="375" y="364" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#3730A3"
+        text-anchor="middle">· Returns final response</text>
+  <!-- badge -->
+  <rect x="318" y="377" width="114" height="18" rx="9" fill="#4F46E5"/>
+  <text x="375" y="390" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600"
+        fill="#ffffff" text-anchor="middle">ENTRY / EXIT POINT</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- C. LLM ORCHESTRATOR (centre) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="530" y="260" width="200" height="200" rx="10" fill="url(#grad-blue)"
+        stroke="#2563EB" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="630" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700"
+        fill="#1D4ED8" text-anchor="middle">LLM Orchestrator</text>
+  <line x1="540" y1="291" x2="720" y2="291" stroke="#93C5FD" stroke-width="1"/>
+  <text x="630" y="307" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">· Understands user intent</text>
+  <text x="630" y="321" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">· Decides: retrieve? call tool?</text>
+  <text x="630" y="335" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">· Combines context + results</text>
+  <text x="630" y="349" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">· Generates final answer</text>
+  <!-- inner badge -->
+  <rect x="556" y="362" width="148" height="18" rx="9" fill="#2563EB"/>
+  <text x="630" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600"
+        fill="#ffffff" text-anchor="middle">CORE DECISION ENGINE</text>
+  <!-- model label -->
+  <text x="630" y="400" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#3B82F6"
+        font-style="italic" text-anchor="middle">e.g. GPT-4o / Gemini 1.5</text>
+  <text x="630" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#3B82F6"
+        font-style="italic" text-anchor="middle">Flash / Claude 3.5</text>
+  <text x="630" y="434" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B7280"
+        text-anchor="middle">(conditional routing)</text>
+  <text x="630" y="449" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B7280"
+        text-anchor="middle">RAG ↙  MCP ↘</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- D. RAG RETRIEVER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="430" y="560" width="175" height="130" rx="10" fill="url(#grad-green)"
+        stroke="#16A34A" stroke-width="2" filter="url(#shadow)"/>
+  <text x="517" y="581" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700"
+        fill="#15803D" text-anchor="middle">RAG Retriever</text>
+  <line x1="440" y1="588" x2="595" y2="588" stroke="#86EFAC" stroke-width="1"/>
+  <text x="517" y="604" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#166534"
+        text-anchor="middle">· Semantic similarity search</text>
+  <text x="517" y="617" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#166534"
+        text-anchor="middle">· Retrieves top-k chunks</text>
+  <text x="517" y="630" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#166534"
+        text-anchor="middle">· Returns context to LLM</text>
+  <rect x="455" y="643" width="124" height="18" rx="9" fill="#16A34A"/>
+  <text x="517" y="656" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600"
+        fill="#ffffff" text-anchor="middle">RAG PILLAR</text>
+  <text x="517" y="678" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#15803D"
+        font-style="italic" text-anchor="middle">(if context insufficient)</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- E. VECTOR DATABASE -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="295" y="680" width="160" height="90" rx="10" fill="url(#grad-green)"
+        stroke="#16A34A" stroke-width="1.5" stroke-dasharray="5 3" filter="url(#shadow)"/>
+  <!-- cylinder-like top -->
+  <ellipse cx="375" cy="690" rx="60" ry="8" fill="#86EFAC" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="375" y="716" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700"
+        fill="#15803D" text-anchor="middle">Vector DB</text>
+  <text x="375" y="730" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#166534"
+        text-anchor="middle">Embeddings · FAQs</text>
+  <text x="375" y="743" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#166534"
+        text-anchor="middle">Troubleshooting · Docs</text>
+  <text x="375" y="756" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#6B7280"
+        font-style="italic" text-anchor="middle">e.g. Pinecone / Weaviate</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- F. MCP SERVER -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="740" y="560" width="195" height="160" rx="10" fill="url(#grad-purple)"
+        stroke="#9333EA" stroke-width="2" filter="url(#shadow)"/>
+  <text x="837" y="581" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700"
+        fill="#7E22CE" text-anchor="middle">MCP Server</text>
+  <line x1="750" y1="588" x2="925" y2="588" stroke="#D8B4FE" stroke-width="1"/>
+  <text x="837" y="604" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B21A8"
+        text-anchor="middle">· Standardized tool interface</text>
+  <text x="837" y="617" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B21A8"
+        text-anchor="middle">· Tool: create_support_ticket(</text>
+  <text x="837" y="629" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B21A8"
+        text-anchor="middle">    customer_id, issue_desc)</text>
+  <text x="837" y="643" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B21A8"
+        text-anchor="middle">· Tool: check_order_status(</text>
+  <text x="837" y="655" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B21A8"
+        text-anchor="middle">    order_id)</text>
+  <text x="837" y="668" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6B21A8"
+        text-anchor="middle">· Returns tool results to LLM</text>
+  <rect x="763" y="680" width="148" height="18" rx="9" fill="#9333EA"/>
+  <text x="837" y="693" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600"
+        fill="#ffffff" text-anchor="middle">MCP PILLAR</text>
+  <text x="837" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#7E22CE"
+        font-style="italic" text-anchor="middle">(if tool call needed)</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- I. EVAL COLLECTOR (bottom-centre of Our System) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="547" y="680" width="175" height="90" rx="10" fill="url(#grad-eval)"
+        stroke="#B45309" stroke-width="2" filter="url(#shadow)"/>
+  <text x="634" y="701" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700"
+        fill="#92400E" text-anchor="middle">Eval Collector</text>
+  <line x1="557" y1="708" x2="712" y2="708" stroke="#FCD34D" stroke-width="1"/>
+  <text x="634" y="723" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#78350F"
+        text-anchor="middle">· Logs: docs, responses, tools</text>
+  <text x="634" y="736" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#78350F"
+        text-anchor="middle">· Retrieval recall · Faithfulness</text>
+  <text x="634" y="749" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#78350F"
+        text-anchor="middle">· Tool-call correctness</text>
+  <rect x="571" y="757" width="126" height="6" rx="3" fill="#B45309" opacity="0.3"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- G. EXTERNAL SUPPORT API (third-party zone) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="1185" y="295" width="180" height="130" rx="10" fill="url(#grad-orange)"
+        stroke="#EA580C" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1275" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700"
+        fill="#C2410C" text-anchor="middle">External</text>
+  <text x="1275" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700"
+        fill="#C2410C" text-anchor="middle">Support API</text>
+  <line x1="1195" y1="337" x2="1355" y2="337" stroke="#FED7AA" stroke-width="1"/>
+  <text x="1275" y="353" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#9A3412"
+        text-anchor="middle">· Third-party service</text>
+  <text x="1275" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#9A3412"
+        text-anchor="middle">· Ticket creation</text>
+  <text x="1275" y="379" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#9A3412"
+        text-anchor="middle">· Order status lookup</text>
+  <rect x="1210" y="393" width="130" height="18" rx="9" fill="#EA580C"/>
+  <text x="1275" y="406" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600"
+        fill="#ffffff" text-anchor="middle">THIRD-PARTY API</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H. KNOWLEDGE SOURCE (third-party zone) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="1185" y="600" width="180" height="110" rx="10" fill="url(#grad-orange)"
+        stroke="#EA580C" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1275" y="621" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700"
+        fill="#C2410C" text-anchor="middle">Knowledge</text>
+  <text x="1275" y="635" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700"
+        fill="#C2410C" text-anchor="middle">Source</text>
+  <line x1="1195" y1="642" x2="1355" y2="642" stroke="#FED7AA" stroke-width="1"/>
+  <text x="1275" y="658" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#9A3412"
+        text-anchor="middle">· External documentation</text>
+  <text x="1275" y="671" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#9A3412"
+        text-anchor="middle">· FAQs / Guides</text>
+  <text x="1275" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#9A3412"
+        text-anchor="middle">· Ingested into Vector DB</text>
+  <rect x="1210" y="697" width="130" height="18" rx="9" fill="#EA580C"/>
+  <text x="1275" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600"
+        fill="#ffffff" text-anchor="middle">THIRD-PARTY DOCS</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- DATA FLOW ARROWS -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- 1. Customer → API Gateway -->
+  <line x1="165" y1="360" x2="293" y2="360" stroke="#2563EB" stroke-width="2"
+        marker-end="url(#arrow-blue)"/>
+  <rect x="184" y="346" width="88" height="14" rx="4" fill="#EFF6FF" opacity="0.9"/>
+  <text x="228" y="357" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">query / request</text>
+
+  <!-- 2. API Gateway → LLM Orchestrator -->
+  <line x1="455" y1="360" x2="528" y2="360" stroke="#2563EB" stroke-width="2"
+        marker-end="url(#arrow-blue)"/>
+  <rect x="457" y="346" width="66" height="14" rx="4" fill="#EFF6FF" opacity="0.9"/>
+  <text x="490" y="357" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">forward query</text>
+
+  <!-- 3. LLM Orchestrator → RAG Retriever (down-left) -->
+  <path d="M 600 460 L 570 530 L 540 558" fill="none" stroke="#16A34A" stroke-width="2"
+        stroke-dasharray="6 3" marker-end="url(#arrow-green)"/>
+  <rect x="530" y="492" width="84" height="14" rx="4" fill="#F0FDF4" opacity="0.9"/>
+  <text x="572" y="503" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#15803D"
+        text-anchor="middle">retrieve docs</text>
+
+  <!-- 4. RAG Retriever → Vector DB -->
+  <line x1="480" y1="690" x2="457" y2="772" stroke="#16A34A" stroke-width="1.8"
+        marker-end="url(#arrow-green)"/>
+  <rect x="425" y="718" width="78" height="14" rx="4" fill="#F0FDF4" opacity="0.9"/>
+  <text x="464" y="729" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#15803D"
+        text-anchor="middle">ANN search</text>
+
+  <!-- 5. Vector DB → RAG Retriever (return) -->
+  <line x1="445" y1="772" x2="502" y2="692" stroke="#16A34A" stroke-width="1.8"
+        marker-end="url(#arrow-green)"/>
+  <rect x="446" y="728" width="72" height="14" rx="4" fill="#F0FDF4" opacity="0.9"/>
+  <text x="482" y="739" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#15803D"
+        text-anchor="middle">top-k chunks</text>
+
+  <!-- 6. RAG Retriever → LLM Orchestrator (return context) -->
+  <path d="M 575 560 L 600 510 L 626 462" fill="none" stroke="#16A34A" stroke-width="2"
+        stroke-dasharray="6 3" marker-end="url(#arrow-green)"/>
+  <rect x="600" y="492" width="78" height="14" rx="4" fill="#F0FDF4" opacity="0.9"/>
+  <text x="639" y="503" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#15803D"
+        text-anchor="middle">context chunks</text>
+
+  <!-- 7. LLM Orchestrator → MCP Server -->
+  <path d="M 710 420 L 756 540 L 775 558" fill="none" stroke="#9333EA" stroke-width="2"
+        stroke-dasharray="6 3" marker-end="url(#arrow-purple)"/>
+  <rect x="698" y="472" width="80" height="14" rx="4" fill="#FAF5FF" opacity="0.9"/>
+  <text x="738" y="483" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#7E22CE"
+        text-anchor="middle">tool call(args)</text>
+
+  <!-- 8. MCP Server → External Support API -->
+  <line x1="935" y1="380" x2="1183" y2="360" stroke="#9333EA" stroke-width="2"
+        marker-end="url(#arrow-purple)"/>
+  <rect x="1012" y="362" width="94" height="14" rx="4" fill="#FAF5FF" opacity="0.9"/>
+  <text x="1059" y="373" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#7E22CE"
+        text-anchor="middle">API request</text>
+
+  <!-- 9. External Support API → MCP Server (return) -->
+  <line x1="1183" y1="395" x2="935" y2="398" stroke="#9333EA" stroke-width="2"
+        marker-end="url(#arrow-purple)"/>
+  <rect x="1012" y="381" width="94" height="14" rx="4" fill="#FAF5FF" opacity="0.9"/>
+  <text x="1059" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#7E22CE"
+        text-anchor="middle">API response</text>
+
+  <!-- 10. MCP Server → LLM Orchestrator (tool result) -->
+  <path d="M 775 575 L 750 500 L 712 440" fill="none" stroke="#9333EA" stroke-width="2"
+        stroke-dasharray="6 3" marker-end="url(#arrow-purple)"/>
+  <rect x="694" y="502" width="72" height="14" rx="4" fill="#FAF5FF" opacity="0.9"/>
+  <text x="730" y="513" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#7E22CE"
+        text-anchor="middle">tool result</text>
+
+  <!-- 11. LLM Orchestrator → API Gateway (response) -->
+  <line x1="530" y1="340" x2="457" y2="340" stroke="#2563EB" stroke-width="2"
+        marker-end="url(#arrow-blue)"/>
+  <rect x="457" y="326" width="66" height="14" rx="4" fill="#EFF6FF" opacity="0.9"/>
+  <text x="490" y="337" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">final answer</text>
+
+  <!-- 12. API Gateway → Customer (response) -->
+  <line x1="295" y1="340" x2="167" y2="340" stroke="#2563EB" stroke-width="2"
+        marker-end="url(#arrow-blue)"/>
+  <rect x="184" y="326" width="88" height="14" rx="4" fill="#EFF6FF" opacity="0.9"/>
+  <text x="228" y="337" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1D4ED8"
+        text-anchor="middle">support response</text>
+
+  <!-- 13. Knowledge Source → Vector DB (ingestion) -->
+  <line x1="1183" y1="655" x2="460" y2="748" stroke="#EA580C" stroke-width="1.5"
+        stroke-dasharray="4 3" marker-end="url(#arrow-orange)"/>
+  <rect x="740" y="680" width="94" height="14" rx="4" fill="#FFF7ED" opacity="0.9"/>
+  <text x="787" y="691" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#C2410C"
+        text-anchor="middle">doc ingestion</text>
+
+  <!-- EVALUATION ARROWS (dashed amber) -->
+
+  <!-- 14. RAG Retriever → Eval Collector -->
+  <line x1="560" y1="680" x2="600" y2="772" stroke="#B45309" stroke-width="1.5"
+        stroke-dasharray="4 3" marker-end="url(#arrow-eval)"/>
+  <rect x="540" y="718" width="72" height="14" rx="4" fill="#FFFBEB" opacity="0.9"/>
+  <text x="576" y="729" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#92400E"
+        text-anchor="middle">retrieved docs</text>
+
+  <!-- 15. LLM Orchestrator → Eval Collector -->
+  <line x1="634" y1="460" x2="634" y2="678" stroke="#B45309" stroke-width="1.5"
+        stroke-dasharray="4 3" marker-end="url(#arrow-eval)"/>
+  <rect x="602" y="556" width="66" height="14" rx="4" fill="#FFFBEB" opacity="0.9"/>
+  <text x="635" y="567" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#92400E"
+        text-anchor="middle">LLM response</text>
+
+  <!-- 16. MCP Server → Eval Collector -->
+  <line x1="805" y1="720" x2="724" y2="740" stroke="#B45309" stroke-width="1.5"
+        stroke-dasharray="4 3" marker-end="url(#arrow-eval)"/>
+  <rect x="724" y="718" width="72" height="14" rx="4" fill="#FFFBEB" opacity="0.9"/>
+  <text x="760" y="729" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#92400E"
+        text-anchor="middle">tool log</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- LEGEND (bottom-left) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="20" y="680" width="250" height="155" rx="8" fill="white"
+        stroke="#CBD5E1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="145" y="698" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700"
+        fill="#1E293B" text-anchor="middle">LEGEND</text>
+  <line x1="30" y1="703" x2="260" y2="703" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- arrows legend -->
+  <line x1="36" y1="718" x2="76" y2="718" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="84" y="722" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">Main data flow</text>
+
+  <line x1="36" y1="736" x2="76" y2="736" stroke="#16A34A" stroke-width="2"
+        stroke-dasharray="5 3" marker-end="url(#arrow-green)"/>
+  <text x="84" y="740" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">RAG conditional path</text>
+
+  <line x1="36" y1="754" x2="76" y2="754" stroke="#9333EA" stroke-width="2"
+        stroke-dasharray="5 3" marker-end="url(#arrow-purple)"/>
+  <text x="84" y="758" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">MCP conditional path</text>
+
+  <line x1="36" y1="772" x2="76" y2="772" stroke="#EA580C" stroke-width="1.5"
+        stroke-dasharray="4 3" marker-end="url(#arrow-orange)"/>
+  <text x="84" y="776" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">Ingestion (third-party)</text>
+
+  <line x1="36" y1="790" x2="76" y2="790" stroke="#B45309" stroke-width="1.5"
+        stroke-dasharray="4 3" marker-end="url(#arrow-eval)"/>
+  <text x="84" y="794" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">Evaluation monitoring</text>
+
+  <!-- colour swatches -->
+  <rect x="36" y="803" width="10" height="10" rx="2" fill="#C7D2FE" stroke="#4F46E5" stroke-width="1"/>
+  <text x="52" y="813" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">Our System boundary</text>
+  <rect x="145" y="803" width="10" height="10" rx="2" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="161" y="813" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">Third-party boundary</text>
+
+  <!-- MCP + RAG label for server box in legend -->
+  <rect x="36" y="820" width="30" height="10" rx="2" fill="#D8B4FE" stroke="#9333EA" stroke-width="1"/>
+  <text x="72" y="830" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">MCP Server (purple)</text>
+  <rect x="155" y="820" width="30" height="10" rx="2" fill="#BBF7D0" stroke="#16A34A" stroke-width="1"/>
+  <text x="191" y="830" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#374151">RAG (green)</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- MCP ↔ EXTERNAL API: vertical connector label -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- boundary label between our system and third-party -->
+  <line x1="1163" y1="68" x2="1163" y2="790" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6 3"/>
+  <rect x="1096" y="410" width="66" height="40" rx="4" fill="#F8FAFC"/>
+  <text x="1129" y="426" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94A3B8"
+        text-anchor="middle">──────────</text>
+  <text x="1129" y="442" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94A3B8"
+        text-anchor="middle">boundary</text>
+
+</svg>
